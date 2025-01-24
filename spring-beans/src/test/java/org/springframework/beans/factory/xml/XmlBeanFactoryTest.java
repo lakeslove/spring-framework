@@ -12,6 +12,8 @@ class XmlBeanFactoryTest {
 		BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("lx/beanFactoryTest.xml"));
 		MyTestBean bean = (MyTestBean) beanFactory.getBean("myTestBean");
 		assertEquals("testStr",bean.getTestStr());
+		bean.setTestStr("testStr2");
+		assertEquals("testStr2",bean.getTestStr());
 
 	}
 
